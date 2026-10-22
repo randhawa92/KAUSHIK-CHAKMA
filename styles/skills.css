@@ -1,0 +1,113 @@
+
+.page-main {
+    max-width: 1150px;
+    min-height: 70vh;
+    margin: auto;
+    padding: 65px 7%;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.page-heading h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.page-heading h1 span {
+    color: var(--primary);
+}
+
+.page-heading > p:last-child {
+    color: var(--muted);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.skill-card {
+    padding: 25px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.skill-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.skill-label {
+    display: inline-block;
+    padding: 5px 10px;
+    color: var(--primary);
+    background: #eff6ff;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.soft-skills {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.soft-skills h2 {
+    margin-bottom: 20px;
+}
+
+.tag-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag-list span {
+    padding: 9px 16px;
+    background: var(--white);
+    border: 1px solid #bfdbfe;
+    border-radius: 25px;
+    color: #1d4ed8;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+@media (max-width: 850px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .page-main {
+        padding: 45px 6%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
